@@ -1,3 +1,9 @@
+"""
+Utility helpers: model I/O, logging, visualization, metrics.
+
+工具函数集合：模型读写、日志、可视化与评估指标。
+"""
+
 import torch
 import logging
 from datetime import datetime
@@ -5,9 +11,27 @@ from torch.utils.tensorboard import SummaryWriter
 import numpy as np
 from sklearn.metrics import r2_score
 import matplotlib.pyplot as plt
+import os
+
+
+def ensure_dir(path: str):
+    """
+    Create directory if absent.
+
+    若目录不存在则创建。
+    """
+    os.makedirs(path, exist_ok=True)
+
+
+ 
 
 
 def load_model(model, path):
+    """
+    Load a state dict into the given model.
+
+    从指定路径加载权重到传入模型。
+    """
     model.load_state_dict(torch.load(path))
     model.eval()
     logging.info(f"Model loaded from {path}")
@@ -15,7 +39,11 @@ def load_model(model, path):
 
 
 def setup_logging(experiment_name):
-    """TensorBoard"""
+    """
+    Create a TensorBoard SummaryWriter.
+
+    创建 TensorBoard 写入器。
+    """
     current_time = datetime.now().strftime("%Y%m%d-%H%M%S")
     log_dir = f"logs/{current_time}_{experiment_name}"
     writer = SummaryWriter(log_dir)
@@ -24,19 +52,20 @@ def setup_logging(experiment_name):
 
 def log_metrics(writer, metrics, step, prefix="Train"):
     """
-    Log training or validation metrics to TensorBoard
-    
-    Args:
-        writer (SummaryWriter): The writer for TensorBoard.
-        metrics (dict): A dictionary containing various metric values.
-        step (int): The current step or epoch.
-        prefix (str): A prefix for the metrics to distinguish between training or validation.
+    Log training or validation metrics to TensorBoard.
+
+    将训练/验证指标写入 TensorBoard。
     """
     for key, value in metrics.items():
         writer.add_scalar(f"{prefix}/{key}", value, step)
 
 
 def visualize_model(model, data, savepath, savepath2, saverocpath):
+    """
+    Generate 3 figures: scatter-of-true-vs-pred, 3D surface, 2D contour.
+
+    生成 3 个图：真实-预测散点、3D 曲面、2D 等高线。
+    """
     # Draw the ROC curve
     x = data['x']
     y = data['y']
@@ -109,6 +138,11 @@ def visualize_model(model, data, savepath, savepath2, saverocpath):
 
 
 def accuracy(model, data):
+    """
+    Compute R-squared on provided dataframe.
+
+    在给定数据上计算 R^2。
+    """
     model.eval()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     X_pred = np.array([data['x'].to_numpy(), data['y'].to_numpy()]).T

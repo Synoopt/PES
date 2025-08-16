@@ -1,26 +1,76 @@
-def get_config(config):
+"""
+Configuration registry.
+
+配置注册：集中管理不同模型配置，并提供默认训练超参。
+"""
+
+DEFAULT_CONFIG_NAME = "2-64"  # 默认配置名 / default config name
+
+
+def list_config_names():
+    """
+    List available model config names.
+
+    列出可用模型配置名。
+    """
+    return list(_MODEL_CONFIGS.keys())
+
+
+def get_config(config_name):
+    """
+    Get merged configuration by name (base + specific).
+
+    按名称获取合并后的配置（基础项 + 特定项）。
+    """
     base_config = {
         "input_dim": 2,
         "output_dim": 1,
         "train_data_path": "input_force_filtered.csv",
+        # Training hyperparameters (can be overridden via CLI)
+        "epochs": 1000,
+        "patience": 50,
+        "min_delta": 1e-4,
+        "scheduler_mode": "min",
+        "scheduler_patience": 10,
+        "scheduler_factor": 0.67,
     }
 
-    model_configs = {
-        "2-64": {  # Name of this training
-            "hidden_dim": 64,  # The dimension (number of neurons) of the hidden layer.
-            "num_layers": 2,  # The number of hidden layers.
-            "learning_rate": 0.001,  # The initial learning rate.
-            "weight": 70,  # The weight of tthe gradient during the learning process.
-            "activation_function": "Mish",  # The activation function.
-            "save_model_path": "2-64.pth",  # The file path to save the model.
-            "saveaxpath": "ax.png",  # The file path to save the 3D PES plot.
-            "saveaxpath2": "ax2.png",  # The file path to save the 2D contour path.
-            "assesspath": "assess.png",  # The file path to save the Actual-Predicted pic.
-        },
+    specific_config = _MODEL_CONFIGS[config_name]
+    return {**base_config, **specific_config}
 
-    }
 
-    # Return combined configuration
-    specific_config = model_configs[config]
-    configure = {**base_config, **specific_config}
-    return configure
+def get_all_configs():
+    """
+    Get all configs expanded with base defaults.
+
+    获取所有配置，并融合基础默认项。
+    """
+    base = get_config(DEFAULT_CONFIG_NAME)
+    return {name: {**base, **cfg} for name, cfg in _MODEL_CONFIGS.items()}
+
+
+_MODEL_CONFIGS = {
+    "2-64": {
+        "hidden_dim": 64,
+        "num_layers": 2,
+        "learning_rate": 0.001,
+        "weight": 0.014,
+        "activation_function": "Mish",
+        "save_model_path": "2-64.pth",
+        "saveaxpath": "ax.png",
+        "saveaxpath2": "ax2.png",
+        "assesspath": "assess.png",
+    },
+    "3-32": {
+        "hidden_dim": 32,
+        "num_layers": 3,
+        "learning_rate": 0.001,
+        "weight": 0.014,
+        "activation_function": "Mish",
+        "save_model_path": "3-32.pth",
+        "saveaxpath": "ax.png",
+        "saveaxpath2": "ax2.png",
+        "assesspath": "assess.png",
+    },
+}
+

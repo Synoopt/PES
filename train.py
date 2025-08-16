@@ -1,20 +1,58 @@
+"""
+Training loop utilities.
+
+训练循环工具：包含训练函数与模型保存。
+"""
+
 import torch
 from utils import setup_logging, log_metrics
 import numpy as np
 from sklearn.metrics import r2_score
 from tqdm import tqdm
 
-def train(model, train_loader, criterion, optimizer, scheduler, path, data, weight, trainname):
+def train(
+    model,
+    train_loader,
+    criterion,
+    optimizer,
+    scheduler,
+    path,
+    data,
+    weight,
+    trainname,
+    epochs: int = 1000,
+    patience: int = 50,
+    min_delta: float = 1e-4,
+):
+    """
+    Train the model with early stopping and LR scheduling.
+
+    使用提前停止与学习率调度训练模型。
+
+    Args:
+        model: torch model / 模型
+        train_loader: DataLoader producing (X, y) / 训练数据加载器
+        criterion: loss function / 损失函数
+        optimizer: optimizer / 优化器
+        scheduler: LR scheduler / 学习率调度器
+        path (str): checkpoint save path / 模型保存路径
+        data (pd.DataFrame): raw dataframe for eval / 用于评估与可视化的数据
+        weight (float): gradient term weight / 梯度项权重
+        trainname (str): run name for logging / 训练任务名称
+        epochs (int): max epochs / 最大轮数
+        patience (int): early stopping patience / 提前停止耐心值
+        min_delta (float): min improvement to reset patience / 认定为改进的最小幅度
+    """
     torch.set_num_threads(12)
     trainname = ''.join(['Training Batch','-',trainname])
     writer = setup_logging(trainname)
     model.train()
     best_loss = float('inf')
-    patience = 50
     patience_counter = 0
-    min_delta = 0.0001
+    # min improvement to reset patience
+    min_delta = float(min_delta)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    epochs = 1000
+    epochs = int(epochs)
     current_lr = optimizer.param_groups[0]['lr']  # the initial learning rate
     loss_list = []
     for epoch in tqdm(range(epochs),desc=trainname):
@@ -44,7 +82,8 @@ def train(model, train_loader, criterion, optimizer, scheduler, path, data, weig
         sum_total /= len(train_loader)
         loss_list.append(sum_total)
         epsilon = 1e-6
-        # judge the gradient vanishing
+        # Detect gradient vanishing to avoid futile training.
+        # 检测梯度消失以避免无效训练。
         if torch.all(grad_list.abs().mean() < epsilon):
             print('break')
             break
@@ -53,7 +92,8 @@ def train(model, train_loader, criterion, optimizer, scheduler, path, data, weig
         X_pred = np.array([data['x'].to_numpy(), data['y'].to_numpy()]).T
         X_pred_tensor = torch.tensor(X_pred, dtype=torch.float32).to(device)
 
-        # predict
+        # Predict on full mesh for logging.
+        # 在全数据上做预测用于日志记录。
         with torch.no_grad():  # excluding the gradient
             y_pred_tensor = model(X_pred_tensor).cpu()
 
@@ -68,7 +108,8 @@ def train(model, train_loader, criterion, optimizer, scheduler, path, data, weig
         if new_lr < current_lr:
             current_lr = new_lr  # upgrade the learning rate
 
-        # Update the best model if the validation loss improves.
+        # Update the best checkpoint if improved.
+        # 若损失改善则保存最优模型。
         if sum_total < best_loss - min_delta:
             best_loss = sum_total
             patience_counter = 0  # reset the patience counter
@@ -77,13 +118,18 @@ def train(model, train_loader, criterion, optimizer, scheduler, path, data, weig
             patience_counter += 1 # if no improvements, add 1 to the patience counter
         
         #optimize the learning rate
-        scheduler.step(sum_total) 
+        scheduler.step(sum_total.detach().cpu().item())
         # check the early stop condition
         if patience_counter >= patience:
-            print("Early stopping triggered")
+            tqdm.write("Early stopping triggered")
             break
 
 def save_model(model, path):
+    """
+    Save model state dict to disk.
+
+    保存模型权重到磁盘。
+    """
     torch.save(model.state_dict(), path)
 
 
