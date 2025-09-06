@@ -1,0 +1,715 @@
+ Entering Gaussian System, Link 0=g16
+ Initial command:
+ /home/garyx/gaussian/g16/l1.exe "/tmp/gaussian_scratch/Gau-904463.inp" -scrdir="/tmp/gaussian_scratch/"
+ Entering Link 1 = /home/garyx/gaussian/g16/l1.exe PID=    904465.
+  
+ Copyright (c) 1988-2019, Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 16 program.  It is based on
+ the Gaussian(R) 09 system (copyright 2009, Gaussian, Inc.),
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 16, Revision C.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, 
+ G. A. Petersson, H. Nakatsuji, X. Li, M. Caricato, A. V. Marenich, 
+ J. Bloino, B. G. Janesko, R. Gomperts, B. Mennucci, H. P. Hratchian, 
+ J. V. Ortiz, A. F. Izmaylov, J. L. Sonnenberg, D. Williams-Young, 
+ F. Ding, F. Lipparini, F. Egidi, J. Goings, B. Peng, A. Petrone, 
+ T. Henderson, D. Ranasinghe, V. G. Zakrzewski, J. Gao, N. Rega, 
+ G. Zheng, W. Liang, M. Hada, M. Ehara, K. Toyota, R. Fukuda, 
+ J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, H. Nakai, 
+ T. Vreven, K. Throssell, J. A. Montgomery, Jr., J. E. Peralta, 
+ F. Ogliaro, M. J. Bearpark, J. J. Heyd, E. N. Brothers, K. N. Kudin, 
+ V. N. Staroverov, T. A. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. P. Rendell, J. C. Burant, S. S. Iyengar, 
+ J. Tomasi, M. Cossi, J. M. Millam, M. Klene, C. Adamo, R. Cammi, 
+ J. W. Ochterski, R. L. Martin, K. Morokuma, O. Farkas, 
+ J. B. Foresman, and D. J. Fox, Gaussian, Inc., Wallingford CT, 2019.
+ 
+ ******************************************
+ Gaussian 16:  ES64L-G16RevC.01  3-Jul-2019
+                22-Aug-2025 
+ ******************************************
+ %mem=10GB
+ %nprocs=8
+ Will use up to    8 processors via shared memory.
+ -----------------------------------------
+ # sp b3lyp/6-311g** Force nosymm scf=(qc)
+ -----------------------------------------
+ 1/10=4,30=1,38=1/1,3;
+ 2/12=2,15=1,17=6,18=5,40=1/2;
+ 3/5=4,6=6,7=101,11=2,25=1,30=1,71=2,74=-5,140=1/1,2,3;
+ 4//1;
+ 5/5=2,8=3,38=5,98=1/8;
+ 8/6=4,10=90,11=11/1;
+ 11/6=1,8=1,9=11,15=111,16=1,31=1/1,2,10;
+ 10/6=1,31=1/2;
+ 6/7=2,8=2,9=2,10=2,28=1/1;
+ 7/8=1,10=1,25=1,30=1/1,2,3,16;
+ 1/10=4,30=1/3;
+ 99//99;
+ -------------------
+ Title Card Required
+ -------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 2
+ H                     0.        0.        0. 
+ H                    -2.25      0.        0. 
+ F                     3.35      0.        0. 
+ 
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Berny optimization.
+ Initialization pass.
+ Trust Radius=3.00D-01 FncErr=1.00D-07 GrdErr=1.00D-07 EigMax=2.50D+02 EigMin=1.00D-04
+ Number of steps in this run=      2 maximum allowed number of steps=      2.
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.000000    0.000000
+      2          1           0       -2.250000    0.000000    0.000000
+      3          9           0        3.350000    0.000000    0.000000
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  H    0.000000
+     2  H    2.250000   0.000000
+     3  F    3.350000   5.600000   0.000000
+ Symmetry turned off by external request.
+ Stoichiometry    FH2(2)
+ Framework group  C*V[C*(HHF)]
+ Deg. of freedom     2
+ Full point group                 C*V     NOp   4
+ Rotational constants (GHZ):           0.0000000          12.9438439          12.9438439
+ Standard basis: 6-311G(d,p) (5D, 7F)
+    30 basis functions,    48 primitive gaussians,    31 cartesian basis functions
+     6 alpha electrons        5 beta electrons
+       nuclear repulsion energy         2.5073233651 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    3 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 2 integral format.
+ Two-electron integral symmetry is turned off.
+ One-electron integrals computed using PRISM.
+ NBasis=    30 RedAO= T EigKep=  8.80D-02  NBF=    30
+ NBsUse=    30 1.00D-06 EigRej= -1.00D+00 NBFU=    30
+ ExpMin= 1.03D-01 ExpMax= 1.14D+04 ExpMxC= 1.72D+03 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
+ Harris functional with IExCor=  402 and IRadAn=       5 diagonalized for initial guess.
+ HarFok:  IExCor=  402 AccDes= 0.00D+00 IRadAn=         5 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=       500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Symmetry not used in FoFCou.
+ Initial guess <Sx>= 0.0000 <Sy>= 0.0000 <Sz>= 0.5000 <S**2>= 0.7500 S= 0.5000
+ Keep R1 and R2 ints in memory in canonical form, NReq=7127049.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+  Beta Gap=    -0.577 HL deriv= 3.59D-17 Rot set to   3.56D-01
+     Minimum is close to point  3 DX=  4.28D-02 DF= -1.30D-03 DXR=  9.66D-02 DFR=  1.00D-02 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  3 DX=  1.51D-02 DF= -1.47D-05 DXR=  2.46D-02 DFR=  6.05D-04 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  3 DX=  7.01D-03 DF= -7.38D-06 DXR=  1.38D-02 DFR=  1.91D-04 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Accept linear search using points  3 and  4.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Accept linear search using points  1 and  2.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Accept linear search using points  3 and  4.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  2 DX=  1.65D-02 DF= -2.89D-06 DXR=  2.67D-02 DFR=  7.14D-04 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Accept linear search using points  2 and  3.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Accept linear search using points  1 and  2.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=3.02D-03 Max=4.62D-02 NDo=     1
+ AX will form     1 AO Fock derivatives at one time.
+ LinEq1:  Iter=  1 NonCon=     1 RMS=6.14D-04 Max=6.40D-03 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=2.18D-04 Max=1.77D-03 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=1.21D-04 Max=1.42D-03 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=4.78D-05 Max=6.09D-04 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=9.45D-06 Max=9.46D-05 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=6.93D-07 Max=5.84D-06 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=9.64D-08 Max=1.08D-06 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     1 RMS=2.33D-08 Max=1.83D-07 NDo=     1
+ LinEq1:  Iter=  9 NonCon=     1 RMS=1.90D-09 Max=2.19D-08 NDo=     1
+ LinEq1:  Iter= 10 NonCon=     0 RMS=9.15D-10 Max=1.04D-08 NDo=     1
+ Linear equations converged to 1.640D-09 1.640D-08 after    10 iterations.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=2.56D-03 Max=3.95D-02 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=4.07D-04 Max=3.68D-03 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=1.48D-04 Max=1.20D-03 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=8.36D-05 Max=1.03D-03 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=2.75D-05 Max=3.35D-04 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=6.14D-06 Max=5.29D-05 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=5.25D-07 Max=4.51D-06 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=5.90D-08 Max=6.40D-07 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     1 RMS=1.49D-08 Max=1.33D-07 NDo=     1
+ LinEq1:  Iter=  9 NonCon=     0 RMS=1.13D-09 Max=6.93D-09 NDo=     1
+ Linear equations converged to 1.640D-09 1.640D-08 after     9 iterations.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=2.05D-03 Max=3.20D-02 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=2.50D-04 Max=1.59D-03 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=8.61D-05 Max=5.36D-04 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=2.94D-05 Max=4.17D-04 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=1.37D-05 Max=1.01D-04 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=1.49D-06 Max=1.43D-05 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=1.78D-07 Max=1.56D-06 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=2.75D-08 Max=2.46D-07 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     1 RMS=7.46D-09 Max=6.68D-08 NDo=     1
+ LinEq1:  Iter=  9 NonCon=     0 RMS=9.12D-10 Max=6.45D-09 NDo=     1
+ Linear equations converged to 1.640D-09 1.640D-08 after     9 iterations.
+     Minimum is close to point  2 DX=  6.32D-02 DF= -5.91D-07 DXR=  5.94D-02 DFR=  3.55D-03 which will be used.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=4.11D-04 Max=5.41D-03 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=2.16D-04 Max=1.81D-03 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=8.73D-05 Max=8.48D-04 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=3.97D-05 Max=4.95D-04 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=1.01D-05 Max=7.14D-05 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=9.89D-07 Max=5.85D-06 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=6.91D-08 Max=5.45D-07 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=1.38D-08 Max=1.48D-07 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     1 RMS=3.58D-09 Max=2.92D-08 NDo=     1
+ LinEq1:  Iter=  9 NonCon=     0 RMS=6.26D-10 Max=4.30D-09 NDo=     1
+ Linear equations converged to 1.640D-09 1.640D-08 after     9 iterations.
+ Incorrect curvature in search direction -- initial direction reversed.
+     Minimum is close to point  5 DX= -8.29D-03 DF= -1.60D-07 DXR=  4.32D-02 DFR=  4.57D-03 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=4.22D-04 Max=6.44D-03 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=1.73D-04 Max=1.21D-03 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=8.56D-05 Max=1.23D-03 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=1.74D-05 Max=1.10D-04 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=3.37D-06 Max=2.96D-05 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=2.40D-07 Max=1.79D-06 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=3.77D-08 Max=3.88D-07 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=1.13D-08 Max=9.63D-08 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     1 RMS=1.75D-09 Max=1.43D-08 NDo=     1
+ LinEq1:  Iter=  9 NonCon=     0 RMS=3.27D-10 Max=4.37D-09 NDo=     1
+ Linear equations converged to 1.640D-09 1.640D-08 after     9 iterations.
+ Incorrect curvature in search direction -- initial direction reversed.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=1.68D-04 Max=1.30D-03 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=2.34D-04 Max=3.03D-03 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=8.43D-05 Max=9.80D-04 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=1.17D-05 Max=7.89D-05 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=1.77D-06 Max=1.68D-05 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=2.14D-07 Max=1.91D-06 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=3.14D-08 Max=2.86D-07 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=7.62D-09 Max=8.34D-08 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     1 RMS=2.69D-09 Max=3.50D-08 NDo=     1
+ LinEq1:  Iter=  9 NonCon=     0 RMS=1.10D-09 Max=9.45D-09 NDo=     1
+ Linear equations converged to 1.640D-09 1.640D-08 after     9 iterations.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=1.80D-04 Max=1.74D-03 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=1.98D-04 Max=2.48D-03 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=1.09D-04 Max=1.51D-03 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=1.89D-05 Max=1.49D-04 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=1.96D-06 Max=1.34D-05 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=3.15D-07 Max=3.83D-06 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=5.51D-08 Max=5.00D-07 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=1.23D-08 Max=1.15D-07 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     1 RMS=3.30D-09 Max=2.26D-08 NDo=     1
+ LinEq1:  Iter=  9 NonCon=     1 RMS=1.24D-09 Max=1.75D-08 NDo=     1
+ LinEq1:  Iter= 10 NonCon=     0 RMS=2.86D-10 Max=1.87D-09 NDo=     1
+ Linear equations converged to 1.640D-09 1.640D-08 after    10 iterations.
+     Accept linear search using points  1 and  2.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=6.40D-05 Max=8.24D-04 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=2.44D-05 Max=2.83D-04 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=5.78D-06 Max=5.09D-05 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=2.57D-06 Max=1.82D-05 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=2.73D-07 Max=2.28D-06 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=5.00D-08 Max=5.44D-07 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=1.40D-08 Max=1.16D-07 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=1.74D-09 Max=1.36D-08 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     0 RMS=5.76D-10 Max=7.59D-09 NDo=     1
+ Linear equations converged to 1.640D-09 1.640D-08 after     8 iterations.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=7.49D-05 Max=5.91D-04 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=3.00D-05 Max=4.13D-04 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=2.76D-05 Max=2.35D-04 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=9.22D-06 Max=9.05D-05 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=7.40D-07 Max=5.01D-06 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=1.40D-07 Max=1.86D-06 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=2.27D-08 Max=2.07D-07 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=4.12D-09 Max=3.33D-08 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     0 RMS=1.08D-09 Max=1.02D-08 NDo=     1
+ Linear equations converged to 1.640D-09 1.640D-08 after     8 iterations.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=6.08D-05 Max=5.13D-04 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=1.51D-05 Max=1.17D-04 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=1.78D-05 Max=1.97D-04 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=6.26D-06 Max=5.99D-05 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=8.24D-07 Max=5.74D-06 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=1.58D-07 Max=1.81D-06 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=1.97D-08 Max=1.71D-07 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=3.45D-09 Max=2.79D-08 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     0 RMS=1.00D-09 Max=9.66D-09 NDo=     1
+ Linear equations converged to 1.640D-09 1.640D-08 after     8 iterations.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=7.81D-06 Max=5.73D-05 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=2.13D-06 Max=2.23D-05 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=2.42D-06 Max=2.48D-05 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=8.41D-07 Max=7.27D-06 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=1.07D-07 Max=7.29D-07 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=2.56D-08 Max=2.10D-07 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=4.46D-09 Max=5.19D-08 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     0 RMS=9.72D-10 Max=1.20D-08 NDo=     1
+ Linear equations converged to 1.640D-09 1.640D-08 after     7 iterations.
+     Accept linear search using points  1 and  2.
+     Minimum is close to point  2 DX= -6.15D-02 DF= -4.48D-10 DXR=  6.56D-02 DFR=  4.50D-03 which will be used.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=5.94D-07 Max=5.06D-06 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=2.10D-07 Max=2.09D-06 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=1.81D-07 Max=1.78D-06 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=9.54D-08 Max=9.75D-07 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=2.76D-08 Max=1.95D-07 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=5.55D-09 Max=5.07D-08 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=1.34D-09 Max=1.16D-08 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     0 RMS=1.24D-10 Max=1.14D-09 NDo=     1
+ Linear equations converged to 2.026D-10 2.026D-09 after     7 iterations.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=3.61D-08 Max=3.43D-07 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=2.89D-08 Max=4.23D-07 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=1.01D-08 Max=1.25D-07 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=4.69D-09 Max=4.72D-08 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=9.52D-10 Max=9.79D-09 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=1.79D-10 Max=1.37D-09 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=4.29D-11 Max=4.99D-10 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     0 RMS=8.54D-12 Max=5.97D-11 NDo=     1
+ Linear equations converged to 2.218D-11 2.218D-10 after     7 iterations.
+ SCF Done:  E(UB3LYP) =  -100.767137017     a.u. after   30 cycles
+            Convg  =    0.1198D-06                   193 Fock formations.
+              S**2 =  1.5907                  -V/T =  2.0019
+ <Sx>= 0.0000 <Sy>= 0.0000 <Sz>= 0.5000 <S**2>= 1.5907 S= 0.8567
+ <L.S>=  0.00000000000    
+ Annihilation of the first spin contaminant:
+ S**2 before annihilation     1.5907,   after     0.7523
+ DoSCS=F DFT=T ScalE2(SS,OS)=  1.000000  1.000000
+ Range of M.O.s used for correlation:     1    30
+ NBasis=    30 NAE=     6 NBE=     5 NFC=     0 NFV=     0
+ NROrb=     30 NOA=     6 NOB=     5 NVA=    24 NVB=    25
+
+ **** Warning!!: The smallest beta delta epsilon is  0.78038795D-01
+
+ Symmetrizing basis deriv contribution to polar:
+ IMax=3 JMax=2 DiffMx= 0.00D+00
+ G2DrvN: will do     4 centers at a time, making    1 passes.
+ Calling FoFCou, ICntrl=  3107 FMM=F I1Cent=   0 AccDes= 0.00D+00.
+ End of G2Drv F.D. properties file   721 does not exist.
+ End of G2Drv F.D. properties file   722 does not exist.
+ End of G2Drv F.D. properties file   788 does not exist.
+          IDoAtm=111
+          Differentiating once with respect to electric field.
+                with respect to dipole field.
+          Differentiating once with respect to nuclear coordinates.
+ Keep R1 and R2 ints in memory in canonical form, NReq=7101519.
+          There are    12 degrees of freedom in the 1st order CPHF.  IDoFFX=6 NUNeed=     3.
+      9 vectors produced by pass  0 Test12= 2.24D-15 8.33D-09 XBig12= 1.50D+02 1.10D+01.
+ AX will form     9 AO Fock derivatives at one time.
+      9 vectors produced by pass  1 Test12= 2.24D-15 8.33D-09 XBig12= 1.19D+00 4.99D-01.
+      9 vectors produced by pass  2 Test12= 2.24D-15 8.33D-09 XBig12= 1.05D-01 1.79D-01.
+      7 vectors produced by pass  3 Test12= 2.24D-15 8.33D-09 XBig12= 3.45D-04 6.26D-03.
+      7 vectors produced by pass  4 Test12= 2.24D-15 8.33D-09 XBig12= 3.21D-06 5.62D-04.
+      4 vectors produced by pass  5 Test12= 2.24D-15 8.33D-09 XBig12= 9.08D-09 5.13D-05.
+      1 vectors produced by pass  6 Test12= 2.24D-15 8.33D-09 XBig12= 2.66D-11 2.05D-06.
+      1 vectors produced by pass  7 Test12= 2.24D-15 8.33D-09 XBig12= 1.42D-14 4.71D-08.
+ InvSVY:  IOpt=1 It=  1 EMax= 2.10D-15
+ Solved reduced A of dimension    47 with     9 vectors.
+ Isotropic polarizability for W=    0.000000       15.92 Bohr**3.
+ End of Minotr F.D. properties file   721 does not exist.
+ End of Minotr F.D. properties file   722 does not exist.
+ End of Minotr F.D. properties file   788 does not exist.
+
+ **********************************************************************
+
+            Population analysis using the SCF Density.
+
+ **********************************************************************
+
+ Alpha  occ. eigenvalues --  -24.75223  -1.21197  -0.54344  -0.45630  -0.45630
+ Alpha  occ. eigenvalues --   -0.32978
+ Alpha virt. eigenvalues --   -0.10554   0.25780   0.33241   0.88146   0.91577
+ Alpha virt. eigenvalues --    0.91577   1.02222   1.24421   1.24824   1.24824
+ Alpha virt. eigenvalues --    1.39291   1.39291   1.44227   2.14282   2.35597
+ Alpha virt. eigenvalues --    3.65933   3.68092   3.68092   3.75027   3.75028
+ Alpha virt. eigenvalues --    5.87538   5.94442   5.94442  66.47786
+  Beta  occ. eigenvalues --  -24.72123  -1.12291  -0.42523  -0.42523  -0.33229
+  Beta virt. eigenvalues --   -0.25426  -0.10036   0.25692   0.33971   0.93062
+  Beta virt. eigenvalues --    0.93062   0.97224   1.06230   1.24096   1.24504
+  Beta virt. eigenvalues --    1.24504   1.40088   1.40088   1.44941   2.15100
+  Beta virt. eigenvalues --    2.35418   3.76631   3.76631   3.77740   3.77740
+  Beta virt. eigenvalues --    3.79731   5.97069   5.97069   6.01437  66.50872
+          Condensed to atoms (all electrons):
+               1          2          3
+     1  H    0.948098   0.039559   0.002564
+     2  H    0.039559   0.955149  -0.000001
+     3  F    0.002564  -0.000001   9.012509
+          Atomic-Atomic Spin Densities.
+               1          2          3
+     1  H   -0.920776   0.002578  -0.001090
+     2  H    0.002578   0.933746  -0.000003
+     3  F   -0.001090  -0.000003   0.984060
+ Mulliken charges and spin densities:
+               1          2
+     1  H    0.009779  -0.919288
+     2  H    0.005293   0.936322
+     3  F   -0.015072   0.982966
+ Sum of Mulliken charges =  -0.00000   1.00000
+ Mulliken charges and spin densities with hydrogens summed into heavy atoms:
+               1          2
+     3  F   -0.000000   1.000000
+ APT charges:
+               1
+     1  H   -0.041719
+     2  H    0.002583
+     3  F    0.039136
+ Sum of APT charges =  -0.00000
+ APT charges with hydrogens summed into heavy atoms:
+               1
+     3  F   -0.000000
+ Electronic spatial extent (au):  <R**2>=            395.4832
+ Charge=             -0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=             -0.3157    Y=             -0.0000    Z=              0.0000  Tot=              0.3157
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=             -7.1080   YY=             -7.6893   ZZ=             -7.6893
+   XY=             -0.0000   XZ=              0.0000   YZ=             -0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=              0.3876   YY=             -0.1938   ZZ=             -0.1938
+   XY=             -0.0000   XZ=              0.0000   YZ=             -0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=            -35.0200  YYY=             -0.0000  ZZZ=              0.0000  XYY=            -13.0764
+  XXY=             -0.0000  XXZ=              0.0000  XZZ=            -13.0764  YZZ=             -0.0000
+  YYZ=              0.0000  XYZ=             -0.0000
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=           -321.0253 YYYY=             -6.4989 ZZZZ=             -6.4989 XXXY=             -0.0000
+ XXXZ=              0.0000 YYYX=             -0.0000 YYYZ=             -0.0000 ZZZX=              0.0000
+ ZZZY=             -0.0000 XXYY=            -63.4718 XXZZ=            -63.4718 YYZZ=             -2.1663
+ XXYZ=             -0.0000 YYXZ=              0.0000 ZZXY=             -0.0000
+ N-N= 2.507323365102D+00 E-N=-2.459647677516D+02  KE= 1.005731721212D+02
+  Exact polarizability:      43.722      -0.000       2.015       0.000       0.000       2.015
+ Approx polarizability:      34.428      -0.000       1.928       0.000       0.000       1.928
+                          Isotropic Fermi Contact Couplings
+        Atom                 a.u.       MegaHertz       Gauss      10(-4) cm-1
+     1  H(1)              -0.27431   -1226.13837    -437.51666    -408.99574
+     2  H(1)               0.27865    1245.52957     444.43592     415.46394
+     3  F(19)              0.02971     124.99743      44.60219      41.69465
+ --------------------------------------------------------
+       Center         ----  Spin Dipole Couplings  ----
+                      3XX-RR        3YY-RR        3ZZ-RR
+ --------------------------------------------------------
+     1   Atom        0.032329     -0.016165     -0.016165
+     2   Atom       -0.021349      0.010674      0.010674
+     3   Atom        6.188565     -3.094282     -3.094283
+ --------------------------------------------------------
+                        XY            XZ            YZ
+ --------------------------------------------------------
+     1   Atom        0.000000     -0.000000     -0.000000
+     2   Atom        0.000000     -0.000000     -0.000000
+     3   Atom       -0.000000      0.000004      0.000000
+ --------------------------------------------------------
+
+
+ ---------------------------------------------------------------------------------
+              Anisotropic Spin Dipole Couplings in Principal Axis System
+ ---------------------------------------------------------------------------------
+
+       Atom             a.u.   MegaHertz   Gauss  10(-4) cm-1        Axes
+
+              Baa    -0.0162    -8.625    -3.077    -2.877  0.0000  0.9951  0.0987
+     1 H(1)   Bbb    -0.0162    -8.625    -3.077    -2.877  0.0000 -0.0987  0.9951
+              Bcc     0.0323    17.249     6.155     5.754  1.0000  0.0000 -0.0000
+ 
+              Baa    -0.0213   -11.391    -4.065    -3.800  1.0000 -0.0000  0.0000
+     2 H(1)   Bbb     0.0107     5.695     2.032     1.900  0.0000  0.9951  0.0991
+              Bcc     0.0107     5.695     2.032     1.900 -0.0000 -0.0991  0.9951
+ 
+              Baa    -3.0943 -1554.028  -554.516  -518.368 -0.0000 -0.0952  0.9955
+     3 F(19)  Bbb    -3.0943 -1554.028  -554.516  -518.368  0.0000  0.9955  0.0952
+              Bcc     6.1886  3108.056  1109.032  1036.736  1.0000 -0.0000  0.0000
+ 
+
+ ---------------------------------------------------------------------------------
+
+ Calling FoFJK, ICntrl=    100127 FMM=F ISym2X=0 I1Cent= 0 IOpClX= 1 NMat=1 NMatS=1 NMatT=0.
+ Full mass-weighted force constant matrix:
+ Low frequencies --- -958.6774 -166.3519   -0.0008    0.0005    0.0005   52.1103
+ Low frequencies ---   52.1103  376.3932  376.3932
+ ******    2 imaginary frequencies (negative Signs) ****** 
+ Diagonal vibrational polarizability:
+       11.1841984       0.0100313       0.0100313
+ Harmonic frequencies (cm**-1), IR intensities (KM/Mole), Raman scattering
+ activities (A**4/AMU), depolarization ratios for plane and unpolarized
+ incident light, reduced masses (AMU), force constants (mDyne/A),
+ and normal coordinates:
+                      1                      2                      3
+                      A                      A                      A
+ Frequencies --   -958.6774              -166.3519               365.8633
+ Red. masses --      1.0079                 1.1084                 1.0138
+ Frc consts  --      0.5458                 0.0181                 0.0800
+ IR Inten    --     10.9617                11.1707                 0.0499
+  Atom  AN      X      Y      Z        X      Y      Z        X      Y      Z
+     1   1     0.73  -0.00   0.00     0.68  -0.00   0.00    -0.00   0.16   0.84
+     2   1    -0.68   0.00  -0.00     0.73   0.00  -0.00    -0.00  -0.09  -0.50
+     3   9    -0.00   0.00  -0.00    -0.07   0.00  -0.00     0.00  -0.00  -0.02
+                      4
+                      A
+ Frequencies --    365.8633
+ Red. masses --      1.0138
+ Frc consts  --      0.0800
+ IR Inten    --      0.0499
+  Atom  AN      X      Y      Z
+     1   1     0.00   0.84  -0.16
+     2   1     0.00  -0.50   0.09
+     3   9    -0.00  -0.02   0.00
+
+ -------------------
+ - Thermochemistry -
+ -------------------
+ Temperature   298.150 Kelvin.  Pressure   1.00000 Atm.
+ Atom     1 has atomic number  1 and mass   1.00783
+ Atom     2 has atomic number  1 and mass   1.00783
+ Atom     3 has atomic number  9 and mass  18.99840
+ Molecular mass:    21.01405 amu.
+ Principal axes and moments of inertia in atomic units:
+                           1         2         3
+     Eigenvalues --     0.00000 139.42854 139.42854
+           X            1.00000  -0.00000   0.00000
+           Y            0.00000   1.00000   0.00000
+           Z            0.00000   0.00000   1.00000
+ This molecule is a prolate symmetric top.
+ Rotational symmetry number  1.
+ Rotational temperature (Kelvin)      0.62121
+ Rotational constant (GHZ):          12.943844
+    2 imaginary frequencies ignored.
+ Zero-point vibrational energy       4376.7 (Joules/Mol)
+                                    1.04606 (Kcal/Mol)
+ Warning -- explicit consideration of   2 degrees of freedom as
+           vibrations may cause significant error
+ Vibrational temperatures:    526.40   526.40
+          (Kelvin)
+ 
+ Zero-point correction=                           0.001667 (Hartree/Particle)
+ Thermal correction to Energy=                    0.004716
+ Thermal correction to Enthalpy=                  0.005660
+ Thermal correction to Gibbs Free Energy=        -0.019472
+ Sum of electronic and zero-point Energies=           -100.765470
+ Sum of electronic and thermal Energies=              -100.762421
+ Sum of electronic and thermal Enthalpies=            -100.761477
+ Sum of electronic and thermal Free Energies=         -100.786609
+ 
+                     E (Thermal)             CV                S
+                      KCal/Mol        Cal/Mol-Kelvin    Cal/Mol-Kelvin
+ Total                    2.959              8.053             52.895
+ Electronic               0.000              0.000              1.377
+ Translational            0.889              2.981             35.068
+ Rotational               0.592              1.987             14.256
+ Vibrational              1.478              3.085              2.194
+ Vibration     1          0.739              1.542              1.097
+ Vibration     2          0.739              1.542              1.097
+                       Q            Log10(Q)             Ln(Q)
+ Total Bot       0.905051D+09          8.956673         20.623502
+ Total V=0       0.528978D+10          9.723437         22.389042
+ Vib (Bot)       0.249015D+00         -0.603774         -1.390242
+ Vib (Bot)    1  0.499014D+00         -0.301887         -0.695121
+ Vib (Bot)    2  0.499014D+00         -0.301887         -0.695121
+ Vib (V=0)       0.145542D+01          0.162990          0.375298
+ Vib (V=0)    1  0.120641D+01          0.081495          0.187649
+ Vib (V=0)    2  0.120641D+01          0.081495          0.187649
+ Electronic      0.200000D+01          0.301030          0.693147
+ Translational   0.378633D+07          6.578219         15.146908
+ Rotational      0.479953D+03          2.681199          6.173688
+ -------------------------------------------------------------------
+ Center     Atomic                   Forces (Hartrees/Bohr)
+ Number     Number              X              Y              Z
+ -------------------------------------------------------------------
+      1        1          -0.009904688    0.000000000   -0.000000000
+      2        1           0.011279612    0.000000000   -0.000000000
+      3        9          -0.001374924   -0.000000000    0.000000000
+ -------------------------------------------------------------------
+ Cartesian Forces:  Max     0.011279612 RMS     0.005024638
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Berny optimization.
+ Search for a local minimum.
+ Step number   1 out of a maximum of    2
+ All quantities printed in internal units (Hartrees-Bohrs-Radians)
+ Second derivative matrix not updated -- analytic derivatives used.
+ The second derivative matrix:
+                          X1        Y1        Z1        X2        Y2
+           X1          -0.01916
+           Y1           0.00000   0.00284
+           Z1          -0.00000  -0.00000   0.00284
+           X2           0.01701  -0.00000   0.00000  -0.01684
+           Y2           0.00000  -0.00265  -0.00000  -0.00000   0.00265
+           Z2          -0.00000  -0.00000  -0.00265   0.00000  -0.00000
+           X3           0.00216  -0.00000   0.00000  -0.00017  -0.00000
+           Y3          -0.00000  -0.00019   0.00000   0.00000   0.00000
+           Z3           0.00000   0.00000  -0.00019  -0.00000   0.00000
+                          Z2        X3        Y3        Z3
+           Z2           0.00265
+           X3           0.00000  -0.00199
+           Y3           0.00000   0.00000   0.00019
+           Z3           0.00000  -0.00000  -0.00000   0.00019
+ ITU=  0
+     Eigenvalues ---   -0.03510  -0.00217   0.00510   0.00510
+ Eigenvalue     1 is  -3.51D-02 should be greater than     0.000000 Eigenvector:
+                          X1        X2        X3        Z1        Z2
+   1                    0.74021  -0.67199  -0.02274   0.00000  -0.00000
+                          Z3        Y1        Y2        Y3
+   1                   -0.00000  -0.00000   0.00000   0.00000
+ Eigenvalue     2 is  -2.17D-03 should be greater than     0.000000 Eigenvector:
+                          X2        X1        X3        Z1        Z2
+   1                    0.67640   0.60098  -0.42579   0.00000  -0.00000
+                          Y1        Y2        Z3        Y3
+   1                   -0.00000   0.00000  -0.00000   0.00000
+ Quadratic step=1.127D+00 exceeds max=3.000D-01 adjusted using Lamda=-1.816D-02.
+ Angle between NR and scaled steps=  46.19 degrees.
+ Angle between quadratic step and forces=  13.45 degrees.
+ Linear search not attempted -- first point.
+ B after Tr=    -0.027365    0.000000    0.000000
+         Rot=    0.999253    0.038651    0.000000   -0.000000 Ang=   4.43 deg.
+ Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
+                                 (Linear)    (Quad)   (Total)
+    X1        0.00000  -0.00990   0.00000  -0.13990  -0.16727  -0.16727
+    Y1        0.00000   0.00000   0.00000   0.00000  -0.00000  -0.00000
+    Z1        0.00000  -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+    X2       -4.25188   0.01128   0.00000   0.26305   0.23568  -4.01620
+    Y2        0.00000   0.00000   0.00000  -0.00000   0.00000   0.00000
+    Z2        0.00000  -0.00000   0.00000   0.00000   0.00000   0.00000
+    X3        6.33058  -0.00137   0.00000  -0.04105  -0.06841   6.26217
+    Y3        0.00000  -0.00000   0.00000  -0.00000   0.00000   0.00000
+    Z3        0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+         Item               Value     Threshold  Converged?
+ Maximum Force            0.011280     0.000450     NO 
+ RMS     Force            0.005025     0.000300     NO 
+ Maximum Displacement     0.235680     0.001800     NO 
+ RMS     Displacement     0.098997     0.001200     NO 
+ Predicted change in Energy=-5.792585D-03
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+
+ ----------------------------------------------------------------------
+
+ Electric dipole moment (input orientation):
+ (Debye = 10**-18 statcoulomb cm , SI units = C m)
+                  (au)            (Debye)         (10**-30 SI)
+   Tot        0.124219D+00      0.315733D+00      0.105317D+01
+   x         -0.124219D+00     -0.315733D+00     -0.105317D+01
+   y          0.000000D+00      0.000000D+00      0.000000D+00
+   z          0.000000D+00      0.000000D+00      0.000000D+00
+
+ Dipole polarizability, Alpha (input orientation).
+ (esu units = cm**3 , SI units = C**2 m**2 J**-1)
+ Alpha(0;0):
+               (au)            (10**-24 esu)      (10**-40 SI)
+   iso        0.159171D+02      0.235866D+01      0.262437D+01
+   aniso      0.417073D+02      0.618039D+01      0.687661D+01
+   xx         0.437219D+02      0.647892D+01      0.720877D+01
+   yx         0.000000D+00      0.000000D+00      0.000000D+00
+   yy         0.201461D+01      0.298535D+00      0.332165D+00
+   zx         0.000000D+00      0.000000D+00      0.000000D+00
+   zy         0.000000D+00      0.000000D+00      0.000000D+00
+   zz         0.201461D+01      0.298535D+00      0.332165D+00
+
+ ----------------------------------------------------------------------
+
+ Dipole orientation:
+     1          0.00000000          0.00000000          0.00000000
+     1         -0.00000002          0.00000002          4.25188378
+     9          0.00000003         -0.00000003         -6.33058252
+
+ Electric dipole moment (dipole orientation):
+ (Debye = 10**-18 statcoulomb cm , SI units = C m)
+                  (au)            (Debye)         (10**-30 SI)
+   Tot        0.124219D+00      0.315733D+00      0.105317D+01
+   x          0.000000D+00      0.000000D+00      0.000000D+00
+   y          0.000000D+00      0.000000D+00      0.000000D+00
+   z          0.124219D+00      0.315733D+00      0.105317D+01
+
+ Dipole polarizability, Alpha (dipole orientation).
+ (esu units = cm**3 , SI units = C**2 m**2 J**-1)
+ Alpha(0;0):
+               (au)            (10**-24 esu)      (10**-40 SI)
+   iso        0.159171D+02      0.235866D+01      0.262437D+01
+   aniso      0.417073D+02      0.618039D+01      0.687661D+01
+   xx         0.201461D+01      0.298535D+00      0.332165D+00
+   yx         0.000000D+00      0.000000D+00      0.000000D+00
+   yy         0.201461D+01      0.298535D+00      0.332165D+00
+   zx         0.000000D+00      0.000000D+00      0.000000D+00
+   zy         0.000000D+00      0.000000D+00      0.000000D+00
+   zz         0.437219D+02      0.647892D+01      0.720877D+01
+
+ ----------------------------------------------------------------------
+ Unable to Open any file for archive entry.
+ 1\1\GINC-DESKTOP-B3RIHJD\Freq\UB3LYP\6-311G(d,p)\F1H2(2)\GARYX\22-Aug-
+ 2025\0\\# sp b3lyp/6-311g** Force nosymm scf=(qc)\\Title Card Required
+ \\0,2\H,0.,0.,0.\H,-2.25,0.,0.\F,3.35,0.,0.\\Version=ES64L-G16RevC.01\
+ HF=-100.767137\S2=1.590734\S2-1=0.\S2A=0.752348\RMSD=7.302e-09\RMSF=5.
+ 025e-03\ZeroPoint=0.001667\Thermal=0.0047156\ETot=-100.7624214\HTot=-1
+ 00.7614772\GTot=-100.7866094\Dipole=-0.1242188,0.,0.\DipoleDeriv=-0.14
+ 72699,0.,0.,0.,0.0110568,0.,0.,0.,0.0110568,-0.0022945,0.,0.,0.,0.0050
+ 217,0.,0.,0.,0.0050217,0.1495644,0.,0.,0.,-0.0160785,0.,0.,0.,-0.01607
+ 85\Polar=43.7219291,0.,2.0146121,0.0000005,0.,2.0146121\Quadrupole=0.2
+ 881467,-0.1440734,-0.1440733,0.,0.0000003,0.\PG=C*V [C*(H1H1F1)]\NImag
+ =2\\-0.01916479,0.,0.00284428,0.,0.,0.00284428,0.01700727,0.,0.,-0.016
+ 83789,0.,-0.00265301,0.,0.,0.00265248,0.,0.,-0.00265301,0.,0.,0.002652
+ 48,0.00215751,0.,0.,-0.00016938,0.,0.,-0.00198813,0.,-0.00019127,0.,0.
+ ,0.00000053,0.,0.,0.00019074,0.,0.,-0.00019127,0.,0.,0.00000053,0.,0.,
+ 0.00019074\\0.00990469,0.,0.,-0.01127961,0.,0.,0.00137492,0.,0.\\\@
+ The archive entry for this job was punched.
+
+
+ A COMPLEXITY IS MERELY A DISARRANGEMENT OF SIMPLICITIES.
+
+                                    -- G. O. ABELL IN "EXPLORATION OF THE UNIVERSE"
+ Job cpu time:       0 days  0 hours  0 minutes 35.0 seconds.
+ Elapsed time:       0 days  0 hours  0 minutes  4.8 seconds.
+ File lengths (MBytes):  RWF=      6 Int=      0 D2E=      0 Chk=      1 Scr=      1
+ Normal termination of Gaussian 16 at Fri Aug 22 21:01:35 2025.
